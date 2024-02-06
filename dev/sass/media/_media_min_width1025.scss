@@ -1,0 +1,15 @@
+@media (min-width: 1025px) {
+    .btn-burger {
+        display: none;
+    }
+    .header__navigation {
+        display: flex;
+    }
+
+    .banner {
+        .slick-slide {
+            border-radius: 20px;
+        }
+    }
+}
+

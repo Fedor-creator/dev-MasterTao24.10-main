@@ -1,0 +1,102 @@
+.template-card {
+    background-color: $bg-secondary;
+    padding: 0 20px 27px;
+    max-width: 360px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+
+    >.img-box {
+        height: 229px;
+        margin: 0 -20px 27px;
+        display: flex;
+        justify-content: center;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 12px;
+    }
+
+    &__options {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        margin-bottom: 7px;
+
+        &-item {
+            display: flex;
+            gap: 7px;
+
+            .img-box {
+                width: 24px;
+                height: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    &__price {
+        margin-bottom: 11px;
+
+        span {
+            font-size: 22px;
+
+            &:first-child {
+                color: #A3A3A3;
+            }
+        }
+
+        b {
+            font-size: 46px;
+        }
+    }
+
+    &-btn-row {
+        display: flex;
+        gap: 14px;
+
+        .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 13px 10px;
+        }
+    }
+}
+
+
+
+.slider-template {
+    margin: 0 -15px;
+
+    .slick-slide {
+        margin: 0 15px;
+    }
+
+    .template-card {
+        margin: 0 auto;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 20px);
+    }
+
+    .slick-prev {
+        left: -100px;
+        transform: translate(0, -50%) rotate(180deg);
+
+    }
+
+    .slick-next {
+        right: -100px;
+        transform: translate(0, -50%);
+    }
+}

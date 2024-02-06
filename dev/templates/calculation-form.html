@@ -1,0 +1,62 @@
+<form class="calculation-form">
+    <div class="input-row">
+        <div class="input-column">
+            <div class="input-box">
+                <label for="category">Категория товара:</label>
+                <input id="category" type="text" placeholder="Категория товара:" value="12345678">
+            </div>
+            <div class="input-box">
+                <label for="weight">Вес груза (кг):</label>
+                <input id="weight" type="number" placeholder="Вес груза (кг):" value="0">
+            </div>
+        </div>
+        <div class="input-column">
+            <div class="input-box">
+                <label for="price">Стоимость груза:</label>
+                <input id="price" type="number" placeholder="Стоимость груза:">
+            </div>
+            <div class="input-box">
+                <label for="size">Объем груза (м3):</label>
+                <input id="size" type="number" placeholder="Введите объем">
+            </div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div class="input-column">
+            <div class="input-box">
+                <div class="check-button">
+                    <input id="insurance" type="checkbox" name="insurance">
+                    <label for="insurance">Страховка</label>
+                </div>  
+            </div>
+            <div class="input-box">
+                <div class="check-button">
+                    <input id="customs-clearance" type="checkbox" checked name="customs-clearance">
+                    <label for="customs-clearance">Таможенное оформление</label>
+                </div>
+            </div>
+        </div>
+        <div class="input-column">
+            <div class="input-box">
+                <label for="product-code">Код ТН ВЭД:</label>
+                <input id="product-code" type="text" placeholder="Код ТН ВЭД:">
+            </div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div class="input-column">
+            <div class="input-box">
+                <div id="file-name">
+                    Имя Вашего файла
+                </div>
+                <input class="input-file" id="fileInput" name="fileInput" type="file">
+                <label for="fileInput">Загрузить фото товара</label>
+            </div>
+        </div>
+    </div>
+    <div class="input-row">
+        <div class="input-column">
+            <button type="button" class="btn btn-primary btn-lg">Следующий шаг<img src="assets/img/icon-arrow-left.svg" class="icon" alt="icon"></button>
+        </div>
+    </div>
+</form>

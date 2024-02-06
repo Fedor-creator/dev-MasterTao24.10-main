@@ -1,0 +1,51 @@
+
+.first-screen {
+    @extend .charter;
+    position: relative;
+}
+
+.banner {
+    .slick-slide {
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 0 92px 68px;
+    }
+
+    &-title {
+        font-size: 56px;
+        max-width: 463px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+
+    }
+
+    &-subtitle {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 135.5%; /* 27.1px */
+        max-width: 345px;
+        margin-bottom: 37px;
+    }
+
+    .slick-dots {
+        position: absolute;
+        bottom: 51px;
+        transform: translate(-50px, 0);
+        left: 50%;
+    }
+}
+
+.banner-arrows {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -24px);
+    width: 100%;
+    max-width: 1566px;
+    display: flex;
+    justify-content: space-between;
+}

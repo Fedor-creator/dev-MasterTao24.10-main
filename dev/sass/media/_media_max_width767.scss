@@ -1,0 +1,19 @@
+@media screen and (max-width: 767px) {
+    .slider-template {
+        width: 100%;
+
+        .slick-list {
+            margin-bottom: 32px;
+        }
+
+        .slick-slide {
+            margin: 0;
+        }
+    }
+
+    .template-card-btn-row {
+        .btn {
+            letter-spacing: 0px;
+        }
+    }
+}
