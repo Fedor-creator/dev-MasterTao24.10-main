@@ -5,15 +5,16 @@
     .header__navigation {
         display: flex;
     }
-
     .banner {
         .slick-slide {
             border-radius: 20px;
         }
     }
-    
     .calculation-form {
         min-width: 626px;
     }
+    .calculation-row {
+        display: flex;
+      }
 }
 

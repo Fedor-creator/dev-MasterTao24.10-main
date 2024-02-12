@@ -123,12 +123,50 @@
 
     }
 
-    .calculation-form {
-        margin: 0 auto;
-        padding: 48px 30px 34px;
-    }
-    
-    
+    .calculation {
+        margin-bottom: 60px;
+        .move-checkbox {
+            padding-top: 5px;
+            gap: 7px;
+        }
+        .move-code {
+            margin-top: -12px;
+        }
+        .btn-lg {
+            .icon {
+                margin: 0 -14px 0 70px;
+            }
+        }
+      }
+
+    .calculation__form {
+        padding: 50px 20px 41px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .calculation-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .calculation-column {
+        gap: 17px;
+        .input-box {
+            .btn {
+                margin-bottom: 0px;
+                max-width: 290px;
+            }
+            .file-name {
+                padding-top: 0px; 
+            }
+        }
+      }
+
+      .calculation__img-box {
+        display: none;
+      }
+
     .calculation-decoration {
         display: none;
     }

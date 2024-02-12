@@ -1,11 +1,10 @@
 .calculation {
     @extend .charter;
-    margin-bottom: 0;
 }
 
 .calculation-row {
     display: flex;
-    align-items: flex-start;
+    gap: 30px;
 }
 
 .calculation-column {
@@ -13,11 +12,12 @@
     flex-direction: column;
     width: 100%;
     gap: 16px;
-}
+  }
 
 .calculation__form {
-    background-color: $bg-secondary;
-    padding: 48px 50px 61px;
+    max-width: 626px;
+    padding: 50px 50px 41px;
+    background-color: #363A4D;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
