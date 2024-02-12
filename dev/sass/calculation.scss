@@ -8,7 +8,14 @@
     align-items: flex-start;
 }
 
-.calculation-form {
+.calculation-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+}
+
+.calculation__form {
     background-color: $bg-secondary;
     padding: 48px 50px 61px;
     border-radius: 20px;
@@ -87,3 +94,10 @@
 .calculation-decoration {
     margin: -180px 0 0 -28px;
 }
+
+.calculation__img-box {
+    position: absolute;
+    right: -2px;
+    top: -26px;
+    max-width: 560px;
+  }
