@@ -1,22 +1,20 @@
 $(document).ready(function(){
-  const burger = document.querySelector('.btn-burger');
-  const navigation = document.querySelector('.header__navigation');
 
-  const toggleMenu =()=> {
-      burger.classList.toggle('open');
-      navigation.classList.toggle('show');
+  // Add class .charter
+  function addClassCharter() {
+    const section = document.querySelectorAll('section')
+    section.forEach(item => item.classList.add('charter'))
   }
-
-  burger.addEventListener('click', toggleMenu);
-
-
-  $('#banner').slick({
-      // setting-name: setting-value
-      arrows: true,
-      dots: true,
-      fade: true,
-      appendArrows: $('.banner-arrows'),
-      responsive: [
+  
+  document.querySelector('.home-page') ? addClassCharter() : null;
+  
+    // Banner-Slider
+    // setting-name: setting-value - Подключение функций 
+      $('#banner').slick({
+        arrows: true,
+        dots: true,
+        appendArrows: $('.banner-arrows'),
+        responsive: [
           {
             breakpoint: 1024,
             settings: {
@@ -24,62 +22,39 @@ $(document).ready(function(){
             }
           },
         ]
-  });
-
-  /*form calculation*/
-  const checkboxes = document.querySelectorAll('[type="checkbox"]')
-  if(checkboxes.length > 0) {
-    checkboxes.forEach(checkbox => {
-      checkbox.closest('.input-column').classList.add('column-checkbox')
-    })
-  }
-
-  const file = document.querySelectorAll('.input-file')
-  if(file.length > 0) {
-    function addPadding() {
-      if ($(window).width() > 1024) {
-        file.forEach(item => {
-          item.closest('.input-column').style.paddingTop = '6px'
-        })
-      } else  {
-        file.forEach(item => {
-          item.closest('.input-column').style.paddingTop = '0'
-        })
-      }
-    } addPadding() 
-    $(window).on("resize", addPadding)
-  }
-
-
-  /*slider advantages(mobile only)*/
-  mobileOnlySlider("#slider-advantages", true, false, 1024);
-  function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
-    var slider = $($slidername);
-    var settings = {
-      mobileFirst: true,
-      dots: $dots,
-      arrows: $arrows,
-      responsive: [
-        {
-          breakpoint: $breakpoint,
-          settings: "unslick"
+      });
+  
+    // Advantages-Slider
+    mobileOnlySlider("#advantages-slider", true, false, 1024);
+  
+    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+      
+      var slider = $($slidername);
+      var settings = {
+        mobileFirst: true,
+        dots: $dots,
+        arrows: $arrows,
+        responsive: [
+          {
+            breakpoint: $breakpoint,
+            settings: "unslick"
+          }
+        ]
+      };
+    
+      slider.slick(settings);
+    
+      $(window).on("resize", function () {
+        if ($(window).width() > $breakpoint) {
+          return;
         }
-      ]
-    };
-  
-    slider.slick(settings);
-  
-    $(window).on("resize", function () {
-      if ($(window).width() > $breakpoint) {
-        return;
-      }
-      if (!slider.hasClass("slick-initialized")) {
-        return slider.slick(settings);
-      }
-    });
-  } 
+        if (!slider.hasClass("slick-initialized")) {
+          return slider.slick(settings);
+        }
+      });
+    }
 
-  /*slider-template*/
+      //Slider-Template//
   $('.slider-template').slick({
     infinite: true,
     slidesToShow: 3,
@@ -107,25 +82,49 @@ $(document).ready(function(){
       },
     ]
   });
-
-  function addClassCharter() {
-      const section = document.querySelectorAll('section')
-      section.forEach(item => item.classList.add('charter'))
-  }
-
-  document.querySelector('.home-page') ? addClassCharter() : null;
-
-  const arrayBurgers = document.querySelectorAll('.hamburger')
+    
+    // Burger-menu
+    const burgers = document.querySelectorAll('.hamburger')
+    const nav = document.querySelector('.header__nav')
   
-  if (arrayBurgers.length > 0) {
-      arrayBurgers.forEach(item => {
-        item.addEventListener('click', function(){
-          item.classList.toggle('is-active');
+    if (burgers.length > 0) {
+      burgers.forEach(element => {
+        element.addEventListener('click', function(){
+          element.classList.toggle('is-active');
+          nav.classList.toggle('show');
+        })
       })
-    })
-  }
-
-});
-
-
-
+    }
+  
+    // File-Input
+    const fileInput = document.querySelector('#fileInput');
+    const fileName  = document.querySelector('#file-name')
+  
+    fileInput.addEventListener('change', function() {
+      fileName.innerHTML = this.files[0].name
+    });
+  
+    // Move-chekbox "Calculation"
+    const chekboxes = document.querySelectorAll('[type="checkbox"]');
+    if(chekboxes.length > 0) {
+      chekboxes.forEach(chekbox => {
+        chekbox.closest('.calculation-column').classList.add('move-checkbox');
+      })
+    }
+  
+    // Move-code "Calculation"
+    const codes = document.querySelectorAll('#code');
+    if(codes.length > 0) {
+      codes.forEach(code => {
+        code.closest('.calculation-column').classList.add('move-code');
+      })
+    }
+  
+    // Move-input-name "Calculation"
+    const file = document.querySelectorAll('.input-file')
+    if(file.length > 0) {
+      file.forEach(item => {
+        item.closest('.calculation-column').style.paddingTop = '6px'
+      })
+    }
+  });
