@@ -1,5 +1,6 @@
 .calculation {
     @extend .charter;
+    margin-bottom: 0;
 }
 
 .calculation-row {
@@ -8,7 +9,6 @@
 }
 
 .calculation-form {
-    min-width: 626px;
     background-color: $bg-secondary;
     padding: 48px 50px 61px;
     border-radius: 20px;

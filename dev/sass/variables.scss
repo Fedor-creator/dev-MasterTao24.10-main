@@ -9,7 +9,7 @@ $container-mobile-padding: 20px;
 ///fonts///
 $font-primary: "ProximaNova";
 $section-margin-lg: 100px;
-$section-margin:  60px;
+$section-margin: 60px;
 
 
 @mixin default-bg {
@@ -20,7 +20,7 @@ $section-margin:  60px;
     max-width: 1920px;
     padding: 90px 85px 100px;
     position: relative;
- 
+
     &:before {
         content: "";
         border-radius: 20px;
@@ -32,7 +32,7 @@ $section-margin:  60px;
         background-color: $bg-secondary;
         z-index: -1;
     }
-    
+
     &:nth-child(odd) {
         .template-title {
             &:after {
@@ -42,11 +42,12 @@ $section-margin:  60px;
     }
 }
 
-    @mixin default-bg-mobile {
-        padding: 55px 0 60px;
-        &:before {
-            border-radius: 0;
-            left: 0;
-            right: 0;
-        }
+@mixin default-bg-mobile {
+    padding: 55px 0 60px;
+
+    &:before {
+        border-radius: 0;
+        left: 0;
+        right: 0;
     }
+}

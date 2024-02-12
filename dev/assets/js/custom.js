@@ -36,9 +36,18 @@ $(document).ready(function(){
 
   const file = document.querySelectorAll('.input-file')
   if(file.length > 0) {
-    file.forEach(item => {
-      item.closest('.input-column').style.paddingTop = '6px'
-    })
+    function addPadding() {
+      if ($(window).width() > 1024) {
+        file.forEach(item => {
+          item.closest('.input-column').style.paddingTop = '6px'
+        })
+      } else  {
+        file.forEach(item => {
+          item.closest('.input-column').style.paddingTop = '0'
+        })
+      }
+    } addPadding() 
+    $(window).on("resize", addPadding)
   }
 
 

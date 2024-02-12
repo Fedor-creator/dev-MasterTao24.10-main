@@ -8,7 +8,7 @@
         padding-left: $container-mobile-padding;
         padding-right: $container-mobile-padding;
     }
-    
+
 
     .header {
         padding: 17px 0 15px;
@@ -60,6 +60,7 @@
         .slick-slide {
             padding: 0 40px;
             height: calc(100vh - 72px);
+
             &:before {
                 content: "";
                 position: absolute;
@@ -70,12 +71,14 @@
                 height: 100%;
                 background: #00000099;
             }
+
             .container {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
-                padding: 0;z-index: 1;
+                padding: 0;
+                z-index: 1;
             }
         }
 
@@ -96,18 +99,56 @@
         max-width: 260px;
     }
 
-    .template-title {
-        text-align: center;
-        padding-bottom: 12px;
-        margin-bottom: 35px
+    .container {
+        .template-title {
+            text-align: center;
+            padding-bottom: 12px;
+            margin: 0 auto 35px;
+
+            h2 {
+                text-align: center;
+            }
+
+
+            &.col-lg-7 {
+                &:after {
+                    display: block;
+                }
+
+                h2:after {
+                    display: none;
+                }
+            }
+        }
+
     }
 
+    .calculation-form {
+        margin: 0 auto;
+        padding: 48px 30px 34px;
+    }
+    
+    
     .calculation-decoration {
         display: none;
     }
+    
+    .input-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .input-column {
+        .btn-lg {
+            width: 100%;
+            .icon {
+                margin: 0 -14px 0 auto;
+                }
+        }
+    }
 
-    .advantages {
-        @include default-bg-mobile;
+    .column-checkbox {
+        padding-top: 8px;
+        margin: 0 0 -8px 0;
     }
 
     .advantage-description {
@@ -117,8 +158,19 @@
     .slider-template {
         width: 390px;
         margin: 0 auto;
+
         .slick-slide {
-          margin: 0 15px;
-      }
+            margin: 0 15px;
+        }
+    }
+
+    .charter {
+        margin-bottom: $section-margin;
+    }
+    
+    .advantages,
+    .services,
+    .test {
+        @include default-bg-mobile;
     }
 }
